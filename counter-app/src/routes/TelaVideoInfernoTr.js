@@ -6,7 +6,8 @@ import { Video } from 'expo-av';
 export function MostrarVideo(){
   
 
-const [videoSource, setVideoSource] = useState(require('../components/images/smkctbanana.mp4'))
+  //const [videoSource, setVideoSource] = useState(require('../components/images/smkctbanana.mp4'))
+  const [videoSource, setVideoSource] = useState({uri:'https://i.imgur.com/dI7nbqY.mp4'})
 
     
 const changeVideo = (newVideoSource) => {
@@ -37,24 +38,24 @@ const changeVideo = (newVideoSource) => {
           
         </View>
         
-        <Text style={style.texto}>Outras smokes para base CT</Text>
+        <Text style={style.textoDesc}>Outras smokes para base CT</Text>
         <ScrollView style={style.containerScroll}>
-        <TouchableHighlight style={style.buttons} onPress={() => changeVideo(require('../components/images/smkctbanana.mp4'))} >
+        <TouchableHighlight style={style.buttons} onPress={() => changeVideo({uri:'https://i.imgur.com/dI7nbqY.mp4'})} >
           <Text style={style.texto}>Smoke CT lançada da banana</Text>
         </TouchableHighlight>      
-        <TouchableHighlight style={style.buttons} onPress={() => changeVideo(require('../components/images/smkct.mp4'))} >
+        <TouchableHighlight style={style.buttons} onPress={() => changeVideo({uri:'https://i.imgur.com/t8qcY1q.mp4'})} >
         <Text style={style.texto}>Smoke CT lançada da base TR</Text>
         </TouchableHighlight>     
-        <TouchableHighlight style={style.buttons} onPress={() => changeVideo(require('../components/images/smkctcarro.mp4'))} >
+        <TouchableHighlight style={style.buttons} onPress={() => changeVideo({uri:'https://i.imgur.com/B70UdXA.mp4'})} >
         <Text style={style.texto}>Smoke CT lançada do carro</Text>
         </TouchableHighlight>    
-        <TouchableHighlight style={style.buttons} onPress={() => changeVideo(require('../components/images/smkctarvore.mp4'))} >
+        <TouchableHighlight style={style.buttons} onPress={() => changeVideo({uri:'https://i.imgur.com/OzWJGy6.mp4'})} >
         <Text style={style.texto}>Smoke CT lançada da arvore</Text>
         </TouchableHighlight>      
-        <TouchableHighlight style={style.buttons} onPress={() => changeVideo(require('../components/images/smkctapartamento.mp4'))} >
+        <TouchableHighlight style={style.buttons} onPress={() => changeVideo({uri:'https://i.imgur.com/UyESHXT.mp4'})} >
         <Text style={style.texto}>Smoke CT lançada do apartamento</Text>
         </TouchableHighlight>   
-        <TouchableHighlight style={style.buttons} onPress={() => changeVideo(require('../components/images/smkctmeio.mp4'))} >
+        <TouchableHighlight style={style.buttons} onPress={() => changeVideo({uri:'https://i.imgur.com/kGwLYuY.mp4'})} >
         <Text style={style.texto}>Smoke CT lançada do meio</Text>
         </TouchableHighlight>      
             
@@ -74,6 +75,7 @@ const changeVideo = (newVideoSource) => {
       
     },
     video: {
+      flex: 1,
       width: '100%',
       height: 300,
     },
@@ -84,13 +86,20 @@ const changeVideo = (newVideoSource) => {
     },
     texto: {
       alignSelf:'center',
-      marginTop:30,
-      marginBottom:10,
       color:'white',
       fontSize:15,
       
       
 
+    },
+    textoDesc: {
+      alignSelf:'center',
+      color:'white',
+      fontSize:15,
+      marginTop:20,
+      marginBottom:10,
+      justifyContent:'center',
+      
     },
     buttons : {
 
@@ -103,6 +112,7 @@ const changeVideo = (newVideoSource) => {
       borderWidth: 1,
       borderColor:'black',
       overflow: 'hidden',
+      justifyContent:'center',
 
     },
     containerScroll: {

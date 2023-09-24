@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Dimensions,TouchableHighlight, Image, SafeAreaView, ImageBackground } from "react-native";
+import { StyleSheet, Text,TouchableHighlight, Image, SafeAreaView, ImageBackground } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 
 
@@ -21,7 +21,6 @@ export default () => {
               <TouchableHighlight style={style.button} onPress={handleButtonPress}>
               <ImageBackground style={style.imagem} source={require('./images/fumaca.png')} resizeMode="cover" />
               </TouchableHighlight>
-
             </SafeAreaView>
     )
 }
@@ -31,11 +30,12 @@ export default () => {
 
 const style = StyleSheet.create({
     map : {
-
-    height: Dimensions.get('window').width,
-    width: Dimensions.get('window').width,
+    position:'absolute',  
+    height: 400,
+    width: 400,
     backgroundColor: '#1c1c1c',
     borderWidth: 1,
+    
 
     
 
@@ -45,16 +45,16 @@ const style = StyleSheet.create({
     width:'100%',
     height:'100%',
     backgroundColor:'black',
-    
+    alignItems:'center',
   
   },
   button: {
-    position: 'absolute',
-    top: 45,             
-    left: 240,                  
-    borderRadius: 5,      
-    height: 35,
-    width: 35,
+    position: 'relative',
+    top: 90,                  
+    left: 10,                  
+    borderRadius: 5,    
+    height: 20,
+    width: 20,
 
     
   },
