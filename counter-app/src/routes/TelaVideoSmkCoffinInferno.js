@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import { Video } from 'expo-av';
 
 
-export function MostrarVideo(){
+export function MostrarVideoSmkCoffin(){
   
 
   //const [videoSource, setVideoSource] = useState(require('../components/images/smkctbanana.mp4'))
-  const [videoSource, setVideoSource] = useState({uri:'https://i.imgur.com/dI7nbqY.mp4'})
+  const [videoSource, setVideoSource] = useState({uri:'https://i.imgur.com/NFQ3rR3.mp4'})
 
     
 const changeVideo = (newVideoSource) => {
@@ -38,27 +38,21 @@ const changeVideo = (newVideoSource) => {
           
         </View>
         
-        <Text style={style.textoDesc}>Outras smokes para base CT</Text>
+        <Text style={style.textoDesc}>Outras smokes para o caixão</Text>
         <ScrollView style={style.containerScroll}>
         <TouchableHighlight style={style.buttons} onPress={() => changeVideo({uri:'https://i.imgur.com/dI7nbqY.mp4'})} >
-          <Text style={style.texto}>Smoke CT lançada da banana</Text>
-        </TouchableHighlight>      
-        <TouchableHighlight style={style.buttons} onPress={() => changeVideo({uri:'https://i.imgur.com/t8qcY1q.mp4'})} >
-        <Text style={style.texto}>Smoke CT lançada da base TR</Text>
-        </TouchableHighlight>     
-        <TouchableHighlight style={style.buttons} onPress={() => changeVideo({uri:'https://i.imgur.com/B70UdXA.mp4'})} >
-        <Text style={style.texto}>Smoke CT lançada do carro</Text>
-        </TouchableHighlight>    
-        <TouchableHighlight style={style.buttons} onPress={() => changeVideo({uri:'https://i.imgur.com/OzWJGy6.mp4'})} >
-        <Text style={style.texto}>Smoke CT lançada da arvore</Text>
-        </TouchableHighlight>      
-        <TouchableHighlight style={style.buttons} onPress={() => changeVideo({uri:'https://i.imgur.com/UyESHXT.mp4'})} >
-        <Text style={style.texto}>Smoke CT lançada do apartamento</Text>
-        </TouchableHighlight>   
-        <TouchableHighlight style={style.buttons} onPress={() => changeVideo({uri:'https://i.imgur.com/kGwLYuY.mp4'})} >
-        <Text style={style.texto}>Smoke CT lançada do meio</Text>
-        </TouchableHighlight>      
-            
+          <Text style={style.texto}>Smoke Caixão lançada da banana</Text>
+        </TouchableHighlight>
+        <TouchableHighlight style={style.buttons} onPress={() => changeVideo({uri:'https://i.imgur.com/RuTWrSq.mp4'})} >
+          <Text style={style.texto}>Smoke Caixão lançada do carro</Text>
+        </TouchableHighlight>
+        <TouchableHighlight style={style.buttons} onPress={() => changeVideo({uri:'https://i.imgur.com/PcbWFhN.mp4'})} >
+          <Text style={style.texto}>Smoke Caixão lançada do meio</Text>
+        </TouchableHighlight>
+        <TouchableHighlight style={style.buttons} onPress={() => changeVideo({uri:'https://i.imgur.com/3xENCbL.mp4'})} >
+          <Text style={style.texto}>Smoke Caixão lançada do apartamento TR</Text>
+        </TouchableHighlight>
+          
         </ScrollView>
       </View>
     )

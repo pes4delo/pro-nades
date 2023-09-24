@@ -11,15 +11,43 @@ export default () => {
 
 
   const navigation = useNavigation();
-  function handleButtonPress() {
-    navigation.navigate('Video');
+  function showVideoSmkCt() {
+    navigation.navigate('VideoSmkCt');
+  }
+
+  function showVideoSmkCoffin() {
+    navigation.navigate('VideoSmkCoffin');
+  }
+
+  function showVideoSmkBanana() {
+    navigation.navigate('VideoSmkBanana');
+  }
+
+  function showVideoSmkMid() {
+    navigation.navigate('VideoSmkMid');
+  }
+
+  function showVideoSmkNip() {
+    navigation.navigate('VideoSmkNip');
   }
     return(
             
             <SafeAreaView style={style.container} >
               <Image style={style.map} source={mapa}  resizeMode="cover" />
-              <TouchableHighlight style={style.button} onPress={handleButtonPress}>
-              <ImageBackground style={style.imagem} source={require('./images/fumaca.png')} resizeMode="cover" />
+              <TouchableHighlight style={style.buttonSmkCt} onPress={showVideoSmkCt}>
+                <ImageBackground style={style.smk} source={require('./images/fumaca.png')} resizeMode="cover" />
+              </TouchableHighlight>
+              <TouchableHighlight style={style.buttonSmkCoffin} onPress={showVideoSmkCoffin}>
+                <ImageBackground style={style.smk} source={require('./images/fumaca.png')} resizeMode="cover" />
+              </TouchableHighlight>
+              <TouchableHighlight style={style.buttonSmkBanana} onPress={showVideoSmkBanana}>
+                <ImageBackground style={style.smk} source={require('./images/fumaca.png')} resizeMode="cover" />
+              </TouchableHighlight>
+              <TouchableHighlight style={style.buttonSmkMid} onPress={showVideoSmkMid}>
+                <ImageBackground style={style.smk} source={require('./images/fumaca.png')} resizeMode="cover" />
+              </TouchableHighlight>
+              <TouchableHighlight style={style.buttonSmkNip} onPress={showVideoSmkNip}>
+                <ImageBackground style={style.smk} source={require('./images/fumaca.png')} resizeMode="cover" />
               </TouchableHighlight>
             </SafeAreaView>
     )
@@ -35,10 +63,6 @@ const style = StyleSheet.create({
     width: 400,
     backgroundColor: '#1c1c1c',
     borderWidth: 1,
-    
-
-    
-
   },
 
   container: {
@@ -48,10 +72,50 @@ const style = StyleSheet.create({
     alignItems:'center',
   
   },
-  button: {
+  buttonSmkCt: {
     position: 'relative',
     top: 90,                  
     left: 10,                  
+    borderRadius: 5,    
+    height: 20,
+    width: 20,
+
+    
+  },
+  buttonSmkCoffin: {
+    position: 'relative',
+    top: 45,                  
+    left: -25,                  
+    borderRadius: 5,    
+    height: 20,
+    width: 20,
+
+    
+  },
+  buttonSmkBanana: {
+    position: 'relative',
+    top: 115,                  
+    left: -35,                  
+    borderRadius: 5,    
+    height: 20,
+    width: 20,
+
+    
+  },
+  buttonSmkMid: {
+    position: 'relative',
+    top: 180,                  
+    left: 20,                  
+    borderRadius: 5,    
+    height: 20,
+    width: 20,
+
+    
+  },
+  buttonSmkNip: {
+    position: 'relative',
+    top: 130,                  
+    left: 40,                  
     borderRadius: 5,    
     height: 20,
     width: 20,
@@ -63,7 +127,7 @@ const style = StyleSheet.create({
     height: 200, 
   },
 
-  imagem:{
+  smk:{
     flex:1,
     width: '100%',
     height: '100%',
