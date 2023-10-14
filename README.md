@@ -1,6 +1,8 @@
 
 # Pro-nades App
 
+
+Desenvolvimento pausado devido ao lançamento do Cs2.
 Pro-nades e um app desenvolvido em React Native com o objetivo de ajudar jogadores de CS:GO com tips and tricks de granadas.
 
 
